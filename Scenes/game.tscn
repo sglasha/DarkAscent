@@ -9,21 +9,23 @@ specular_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_0yfjd")]
+[node name="Player" parent="." instance=ExtResource("1_0yfjd")]
 position = Vector2(426, 275)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -20)
+zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(436, 359)
 scale = Vector2(20, 3)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0.0500015, 0)
 shape = SubResource("RectangleShape2D_2s2hu")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(0, 0.333333)
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(1.52588e-06, 0.333333)
 scale = Vector2(20, 20)
 texture = SubResource("CanvasTexture_btnf1")

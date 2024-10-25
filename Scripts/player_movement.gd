@@ -35,8 +35,10 @@ func _physics_process(delta: float) -> void:
 		lineAngle = mousePOS.angle_to_point(playerPOS)
 		
 		#Probably going to be mainly used for debugging but a good starting point
-		$RayCast2D/Line2D.set_point_position(1, Vector2(-lineLength * cos(lineAngle),-lineLength * sin(lineAngle))) #(sin(lineAngle)/cos(lineAngle)))
-		#print($RayCast2D/Line2D.get_point_position(1))
-		#print($RayCast2D/Line2D.get_point_position(0))
+		$Line2D.set_point_position(1, Vector2(-lineLength * cos(lineAngle),-lineLength * sin(lineAngle))) #(sin(lineAngle)/cos(lineAngle)))
+		$Player_Blast.position = Vector2(-lineLength * cos(lineAngle),-lineLength * sin(lineAngle))
+		#Makes it to where it is not clipping inside of the player on start
+		$Player_Blast/CollisionShape2D2.disabled = false
+		
 	
 #func _unhandled_key_input(Input.is_action_pressed("castout")):
