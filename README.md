@@ -7,9 +7,10 @@
 
 # Current Goals
  Boss Concept Art
- Concept Art
+ Character Concept Art
+ Puzzle Art
  Set up Puzzles to Activate bosses
- Set up Bosses
+ Set up Bosses & Basic Attacks
  Set up Demo Map
  Set up Basic Mechanics
  
@@ -17,4 +18,5 @@
  Add Common Enimies
  Get custom sound effects and Songs
  Make a Larger Map
+ Add minibosses/fight sequences
  Expand Mechanics
