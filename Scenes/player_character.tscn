@@ -14,3 +14,9 @@ shape = SubResource("RectangleShape2D_om7x8")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_6vag0")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="RayCast2D"]
+z_index = 5
+points = PackedVector2Array(0, 0, 0, 50)

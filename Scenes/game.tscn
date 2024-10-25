@@ -10,11 +10,11 @@ specular_color = Color(0, 0, 0, 1)
 [node name="Game" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_0yfjd")]
-position = Vector2(426, 69)
+position = Vector2(426, 275)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 offset = Vector2(0, -20)
-zoom = Vector2(3, 3)
+position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(436, 359)
