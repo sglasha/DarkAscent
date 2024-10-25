@@ -1,17 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://cawu8uodeyyeh"]
+[gd_scene load_steps=4 format=3 uid="uid://cawu8uodeyyeh"]
 
 [ext_resource type="PackedScene" uid="uid://bpib6rsqslcrj" path="res://Scenes/player_character.tscn" id="1_0yfjd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2s2hu"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_btnf1"]
+specular_color = Color(0, 0, 0, 1)
+
 [node name="Game" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_0yfjd")]
-position = Vector2(421, -5)
+position = Vector2(426, 69)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+offset = Vector2(0, -20)
+zoom = Vector2(3, 3)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(435, 359)
+position = Vector2(436, 359)
+scale = Vector2(20, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-scale = Vector2(20, 3)
 shape = SubResource("RectangleShape2D_2s2hu")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, 0.333333)
+scale = Vector2(20, 20)
+texture = SubResource("CanvasTexture_btnf1")
