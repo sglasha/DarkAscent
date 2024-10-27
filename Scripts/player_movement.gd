@@ -3,7 +3,11 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+<<<<<<< Updated upstream
 
+=======
+var ghostIsOut = false
+>>>>>>> Stashed changes
 var mousePOS
 var playerPOS
 
@@ -32,6 +36,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+<<<<<<< Updated upstream
 	if (Input.is_action_just_pressed("castout") and canBlast): #E is the current button for this
 		mousePOS = get_global_mouse_position()
 		playerPOS = $CollisionShape2D.global_position
@@ -54,3 +59,26 @@ func _player_blast(lineLeng, lineAng):
 	canBlast = true
 	
 	$Line2D.set_point_position(1, $Line2D.get_point_position(0))
+=======
+	if (Input.is_action_just_pressed("castout") and !ghostIsOut): #E is the current button for this
+		mousePOS = get_global_mouse_position()
+		playerPOS = $CollisionShape2D.global_position
+		lineAngle = mousePOS.angle_to_point(playerPOS)
+		ghostIsOut = true
+		_explosion(-lineLength, -lineAngle)
+		
+func _explosion(lineLeng,lineAng):
+	#Probably going to be mainly used for debugging but a good starting point
+	$Player_Blast.position = Vector2(lineLeng * cos(lineAng),lineLeng * -sin(lineAng))
+	$Player_Blast.visible = true
+	$Player_Blast/CollisionShape2D2.disabled = false
+	$Line2D.set_point_position(1, Vector2(lineLeng * cos(lineAng),lineLeng * -sin(lineAng)))
+	
+	await get_tree().create_timer(1.2).timeout
+	$Player_Blast.visible = false
+	$Player_Blast/CollisionShape2D2.disabled = true
+	ghostIsOut = false
+	
+	$Line2D.set_point_position(1, $Line2D.get_point_position(0))
+#func _unhandled_key_input(Input.is_action_pressed("castout")):
+>>>>>>> Stashed changes
