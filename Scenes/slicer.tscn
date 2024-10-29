@@ -164,7 +164,7 @@ scale = Vector2(0.188, 0.188)
 sprite_frames = SubResource("SpriteFrames_nv8d6")
 animation = &"WalkCycle"
 autoplay = "WalkCycle"
-frame_progress = 0.29957
+frame_progress = 0.00310438
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-45, 0)

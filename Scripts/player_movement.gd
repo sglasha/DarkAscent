@@ -28,7 +28,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if direction == -1:
+		$Sprite2D.flip_h = true
+	elif direction == 1:
+		$Sprite2D.flip_h = false
+		
 	move_and_slide()
 	
 	if (Input.is_action_just_pressed("castout") and canBlast): #E is the current button for this
