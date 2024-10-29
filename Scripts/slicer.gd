@@ -26,4 +26,4 @@ func _process(delta: float) -> void:
 	if animated_sprite.animation == "WalkCycle":
 		position.x += direction * speed * delta
 	if animated_sprite.animation == "RunCycle":
-		position.x += direction * speed * delta * 2
+		position.x += direction * speed * delta * 3.2

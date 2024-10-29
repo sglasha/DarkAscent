@@ -1,7 +1,8 @@
-[gd_scene load_steps=46 format=3 uid="uid://c2v76vax0r3yo"]
+[gd_scene load_steps=48 format=3 uid="uid://c2v76vax0r3yo"]
 
 [ext_resource type="Texture2D" uid="uid://cnlal0ia6o7r8" path="res://Assets/Spritesheets/BasicEnimyWalkCycleSpritesheet.png" id="1_6c0pt"]
 [ext_resource type="Texture2D" uid="uid://bnjvwsrk575fc" path="res://Assets/Spritesheets/BasicEnimyRunSpritesheet.png" id="1_hrksq"]
+[ext_resource type="PackedScene" uid="uid://bmja0ibv3rwwk" path="res://Scenes/kill_zone.tscn" id="3_5ubjt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngwg5"]
 atlas = ExtResource("1_hrksq")
@@ -310,6 +311,9 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gfbce"]
+radius = 33.1361
+
 [node name="Slicer" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -318,7 +322,7 @@ scale = Vector2(0.188, 0.188)
 sprite_frames = SubResource("SpriteFrames_nv8d6")
 animation = &"RunCycle"
 autoplay = "WalkCycle"
-frame_progress = 0.586275
+frame_progress = 0.819316
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-45, 0)
@@ -339,3 +343,9 @@ scale = Vector2(0.188, 0.188)
 target_position = Vector2(1000, 0)
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="KillZone" parent="." instance=ExtResource("3_5ubjt")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_gfbce")

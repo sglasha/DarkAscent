@@ -1,18 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwkhp4qxe6x00"]
+[gd_scene load_steps=2 format=3 uid="uid://cwkhp4qxe6x00"]
 
 [ext_resource type="Texture2D" uid="uid://dgfqnofml5g6t" path="res://Assets/TileMaps/Tilemap.png" id="1_ropma"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_aanc0"]
-a = Vector2(29, 19)
-b = Vector2(74, 5)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_ykx18"]
-a = Vector2(-72, 4)
-b = Vector2(-28, 18)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_fy4mn"]
-a = Vector2(30, 19)
-b = Vector2(-29, 18)
 
 [node name="Bridge" type="StaticBody2D"]
 
@@ -22,11 +10,6 @@ texture = ExtResource("1_ropma")
 region_enabled = true
 region_rect = Rect2(924.73, 910.023, 847, 285.027)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_aanc0")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_ykx18")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_fy4mn")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-72, 4, -28, 18, 29, 18, 74, 3, 74, 9, 29, 25, -28, 25, -72, 10)
+one_way_collision = true
