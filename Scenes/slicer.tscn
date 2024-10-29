@@ -320,9 +320,8 @@ radius = 33.1361
 position = Vector2(1, 5)
 scale = Vector2(0.188, 0.188)
 sprite_frames = SubResource("SpriteFrames_nv8d6")
-animation = &"RunCycle"
+animation = &"WalkCycle"
 autoplay = "WalkCycle"
-frame_progress = 0.819316
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-45, 0)
