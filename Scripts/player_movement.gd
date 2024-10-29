@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -350.0
 
 var ghostIsOut = false
 var mousePOS
 var playerPOS
 var lineAngle
-var lineLength = 100
+var lineLength = 75
 
 #For when checking if the player can use the blast ability or not
 var canBlast = true
