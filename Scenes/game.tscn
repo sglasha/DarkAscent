@@ -81,19 +81,9 @@ sources/1 = SubResource("TileSetAtlasSource_klmcu")
 position = Vector2(426, 275)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(0, -20)
+position = Vector2(0, -30)
 zoom = Vector2(3.25, 3.25)
 position_smoothing_enabled = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
-scale = Vector2(4, 3.205)
-transform = Transform2D(4, 0, 0, 3.205, 0, 0)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Player/Camera2D/CanvasLayer"]
-z_index = 25
-position = Vector2(431, 238)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_ngq1d")
 
 [node name="TileMap" type="TileMap" parent="."]
 rotation = 0.0123339
@@ -117,3 +107,12 @@ rotation = -1.91986
 [node name="Slicer" parent="." instance=ExtResource("3_3ex80")]
 position = Vector2(1063, 972)
 script = ExtResource("4_fsvxp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer"]
+z_index = 25
+position = Vector2(576, 324)
+rotation = 0.000684255
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_ngq1d")

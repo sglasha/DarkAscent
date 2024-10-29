@@ -19,9 +19,11 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_q2nl1")
 
 [node name="Line2D" type="Line2D" parent="."]
+visible = false
 z_index = 5
 points = PackedVector2Array(0, 0, 0, 0)
 default_color = Color(0, 0, 0, 1)
 
 [node name="Player_Blast" parent="." instance=ExtResource("3_321lf")]
 z_index = 5
+position = Vector2(0, -15)
