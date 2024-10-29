@@ -25,5 +25,6 @@ points = PackedVector2Array(0, 0, 0, 0)
 default_color = Color(0, 0, 0, 1)
 
 [node name="Player_Blast" parent="." instance=ExtResource("3_321lf")]
+visible = false
 z_index = 5
 position = Vector2(0, -15)

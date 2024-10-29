@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -350.0
+const JUMP_VELOCITY = -400.0
 
 var ghostIsOut = false
 var mousePOS
@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 func _player_blast(lineLeng, lineAng):	
 	$Player_Blast.position = Vector2(lineLeng * cos(lineAng),lineLeng * sin(lineAng))
 	$Player_Blast/CollisionShape2D2.disabled = false
-	$Player_Blast/Sprite2D2.visible = true
+	$Player_Blast.visible = true
 	
 	#Probably going to be mainly used for debugging but a good starting point
 	$Line2D.set_point_position(1, Vector2(lineLeng * cos(lineAng),lineLeng * sin(lineAng)))
@@ -53,7 +53,7 @@ func _player_blast(lineLeng, lineAng):
 	#Waits for the timer to expire so the move can reset
 	await get_tree().create_timer(1.2).timeout
 	$Player_Blast/CollisionShape2D2.disabled = true
-	$Player_Blast/Sprite2D2.visible = false
+	$Player_Blast.visible = false
 	canBlast = true
 	
 	$Line2D.set_point_position(1, $Line2D.get_point_position(0))
