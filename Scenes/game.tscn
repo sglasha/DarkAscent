@@ -114,7 +114,7 @@ position = Vector2(757, 209)
 rotation = -1.91986
 
 [node name="Slicer (Enemy)" parent="." instance=ExtResource("3_3ex80")]
-position = Vector2(367, 970)
+position = Vector2(394, 945)
 script = ExtResource("4_fsvxp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

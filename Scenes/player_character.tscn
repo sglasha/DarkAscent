@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpib6rsqslcrj"]
+[gd_scene load_steps=6 format=3 uid="uid://bpib6rsqslcrj"]
 
 [ext_resource type="Script" path="res://Scripts/player_movement.gd" id="1_xnb1g"]
 [ext_resource type="Texture2D" uid="uid://baalivq5cfhjj" path="res://Assets/Spritesheets/Player.png" id="2_q2nl1"]
 [ext_resource type="PackedScene" uid="uid://b7bryga8m1bi" path="res://Scenes/player_blast.tscn" id="3_321lf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_om7x8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3l5k"]
+size = Vector2(20, 46)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_xnb1g")
@@ -28,3 +31,9 @@ default_color = Color(0, 0, 0, 1)
 visible = false
 z_index = 5
 position = Vector2(0, -15)
+
+[node name="RunCheck" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RunCheck"]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_y3l5k")
