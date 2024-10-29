@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dstn4aj11d5sl"]
+
+[ext_resource type="Texture2D" uid="uid://dgfqnofml5g6t" path="res://Assets/TileMaps/Tilemap.png" id="1_wmd35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vynti"]
+size = Vector2(57, 145)
+
+[node name="Vine_Door" type="Area2D"]
+
+[node name="Door_Wall" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_vynti")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 21
+position = Vector2(1.19209e-07, 1)
+rotation = 3.14159
+scale = Vector2(0.25, -0.25)
+texture = ExtResource("1_wmd35")
+region_enabled = true
+region_rect = Rect2(1533.54, 1198.72, 264.243, 601.276)

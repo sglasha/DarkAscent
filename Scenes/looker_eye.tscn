@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce5t4hxik5obj"]
+[gd_scene load_steps=4 format=3 uid="uid://ce5t4hxik5obj"]
 
 [ext_resource type="Texture2D" uid="uid://dgfqnofml5g6t" path="res://Assets/TileMaps/Tilemap.png" id="1_5n76d"]
 [ext_resource type="Script" path="res://Scripts/looker_eye.gd" id="1_dr542"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ldkq"]
+size = Vector2(54, 38)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_dr542")
@@ -11,3 +14,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_5n76d")
 region_enabled = true
 region_rect = Rect2(1168.08, 1.70442, 330.362, 316.018)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_7ldkq")
