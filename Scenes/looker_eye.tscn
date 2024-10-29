@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce5t4hxik5obj"]
 
 [ext_resource type="Texture2D" uid="uid://dgfqnofml5g6t" path="res://Assets/TileMaps/Tilemap.png" id="1_5n76d"]
-[ext_resource type="Script" path="res://Scenes/looker_eye.gd" id="1_dr542"]
+[ext_resource type="Script" path="res://Scripts/looker_eye.gd" id="1_dr542"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_dr542")
