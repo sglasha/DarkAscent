@@ -1,6 +1,7 @@
 # DarkAscent
- A 2D Game Currently at the Game Jam Phase. During this phase it will feature 3 puzzles, a singular enemy, and 2 bosses to beat
+ A 2D Game Currently at the Game Jam Phase. During this phase it will feature a singular enemy and a simple platforming section.
  This Monochromatic puzzle action platformer aims to accomplish the Game Jam Prompt of Afterlife.
+ The Setting of the game is the player trying to fight their way up back to life after having died.
 
 # Accomplished Goals
  Final Boss Concept Art
