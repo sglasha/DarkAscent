@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cawu8uodeyyeh"]
+[gd_scene load_steps=15 format=3 uid="uid://cawu8uodeyyeh"]
 
 [ext_resource type="PackedScene" uid="uid://bpib6rsqslcrj" path="res://Scenes/player_character.tscn" id="1_0yfjd"]
 [ext_resource type="PackedScene" uid="uid://ce5t4hxik5obj" path="res://Scenes/looker_eye.tscn" id="2_7xcn4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cwkhp4qxe6x00" path="res://Scenes/bridge.tscn" id="7_25td2"]
 [ext_resource type="Texture2D" uid="uid://dgfqnofml5g6t" path="res://Assets/TileMaps/Tilemap.png" id="8_vstv0"]
 [ext_resource type="PackedScene" uid="uid://bmja0ibv3rwwk" path="res://Scenes/kill_zone.tscn" id="9_83tiw"]
+[ext_resource type="Texture2D" uid="uid://cnyo1hxpqvt4u" path="res://Assets/ConceptArt/darkAssentFinalBossConceptArt.png" id="9_vlp78"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fdjyl"]
 load_path = "res://.godot/imported/Tilemap.png-258e4f9204a9ef37f26af46c12f0f367.ctex"
@@ -176,3 +177,8 @@ shape = SubResource("RectangleShape2D_rqem6")
 
 [node name="Bridge" parent="." instance=ExtResource("7_25td2")]
 position = Vector2(1349, 256)
+
+[node name="DarkAssentFinalBossConceptArt" type="Sprite2D" parent="."]
+position = Vector2(2028.25, 334.035)
+scale = Vector2(0.843949, 0.843949)
+texture = ExtResource("9_vlp78")
